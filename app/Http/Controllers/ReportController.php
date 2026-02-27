@@ -30,10 +30,17 @@ class ReportController extends Controller
             ->whereDate("created_at", Carbon::today())
             ->orderBy("amount", "desc")
             ->first();
+
+        $top5CategoryExpense = Auth::user()->expenses()
+            ->selectRaw("expense_category_id, SUM(amount) as total")
+            ->groupBy("expense_category_id")
+            ->orderBy("total", "desc")
+            ->take(5)
+            ->get();
         
 
 
 
-        return view("loggedin.reports", compact("top5Expenses", "top5ExpensesMonthly", "biggestExpenseToday"));
+        return view("loggedin.reports", compact("top5Expenses", "top5ExpensesMonthly", "biggestExpenseToday", "top5CategoryExpense"));
     }
 }
