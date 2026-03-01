@@ -17,4 +17,4 @@ RUN composer install --optimize-autoloader --no-dev --no-interaction --ignore-pl
 
 EXPOSE 8000
 
-CMD cp .env.example .env && php artisan key:generate --force && php artisan serve --host=0.0.0.0 --port=8000
+CMD cp .env.example .env && php artisan key:generate --force && php artisan migrate --force && php artisan db:seed --force && php artisan serve --host=0.0.0.0 --port=8000
