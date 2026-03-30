@@ -14,7 +14,7 @@ class IncomeSeeder extends Seeder
     public function run(): void
     {
         $income = new Income();
-        $income->User_id = 1;
+        $income->user_id = 1;
         $income->title = "Softwer Developer";
         $income->income_category_id = 1;
         $income->description = "This is some/your description for this salary. How you earnd it and all the details about the transaction!";
@@ -22,14 +22,14 @@ class IncomeSeeder extends Seeder
         $income->save();
 
         $income = new Income();
-        $income->User_id = 2;
+        $income->user_id = 2;
         $income->title = "Teacher";
         $income->income_category_id = 2;
         $income->amount = 1100;
         $income->save();
 
         $income = new Income();
-        $income->User_id = 3;
+        $income->user_id = 3;
         $income->title = "CEO";
         $income->income_category_id = 3;
         $income->amount = 2500;
