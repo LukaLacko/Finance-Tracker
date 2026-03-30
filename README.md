@@ -4,7 +4,7 @@ A full-stack web application for personal finance management — track income,
 expenses, budgets, and generate financial reports with real-time currency conversion.
 
 # Live Demo
-[Live Demo](https://expense-tracker-production-edfb.up.railway.app/)
+[Live Demo](https://finance-tracker-main-lu39je.free.laravel.cloud/)
 
 # Test Account
 - Email: alen1@gmail.com
